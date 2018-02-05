@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+        
+    </head>
+<body>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="secondDrawingSurface" width="600" height="400">
+            Your browser does not support HTML5.
+    </canvas>
+    <canvas id="thirdSurface" width="600" height="400">
+            Your browser does not support HTML5.
+    </canvas>
+    <script>
+            window.onload=function(){
+                var drawingSurface=document.getElementById("drawingSurface");
+                var ctxt=drawingSurface.getContext("2d");
+
+               ctxt.beginPath();
+               ctxt.arc(150,100,75,0,2*Math.PI,false);
+               ctxt.lineWidth=25;
+               ctxt.strokeStyle="#0f0";
+               ctxt.stroke();
+
+               ctxt.beginPath();
+               ctxt.arc(450,100,75,1.5*Math.PI, 2*Math.PI,false);
+               ctxt.lineWidth=25;
+               ctxt.strokeStyle="blue";
+               ctxt.stroke();
+
+               ctxt.beginPath();
+               ctxt.arc(150,300,75,1*Math.PI, 1.5*Math.PI, false);
+               ctxt.lineWidth=25;
+               ctxt.strokeStyle="#0ff";
+               ctxt.stroke();
+
+               ctxt.beginPath();
+               ctxt.arc(450,300,75,.5*Math.PI,1*Math.PI, false);
+               ctxt.lineWidth=25;
+               ctxt.strokeStyle="#f00";
+               ctxt.stroke();
+
+               var secondSurface=document.getElementById("secondDrawingSurface");
+               var secondContext=secondSurface.getContext("2d");
+
+               secondContext.beginPath();
+               secondContext.moveTo(10,380);
+               secondContext.quadraticCurveTo(300,-250,580,380);
+               secondContext.lineWidth=25;
+               secondContext.strokeStyle="#f00";
+               secondContext.stroke();
+
+               var thirdSurface=document.getElementById("thirdSurface");
+               var thirdContext=thirdSurface.getContext("2d");
+
+               thirdContext.beginPath();
+               thirdContext.moveTo(125,20);
+               thirdContext.bezierCurveTo(0,200,300,300,50,400);
+               thirdContext.lineWidth=5;
+               thirdContext.strokeStyle="#f00";
+               thirdContext.stroke();
+            }
+        </script>
+</body> 
+</html>

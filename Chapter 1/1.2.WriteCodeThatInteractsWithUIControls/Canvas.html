@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+        
+    </head>
+<body>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <script>
+            window.onload=function(){
+                var drawingSurface=document.getElementById("drawingSurface");
+                var ctxt=drawingSurface.getContext("2d");
+                ctxt.beginPath();
+                ctxt.moveTo(10,10);
+                ctxt.lineTo(225,350);
+                ctxt.lineTo(300,10);
+                ctxt.lineTo(400,350);
+                ctxt.lineWidth=5;
+                //ctxt.lineCap="round";
+                ctxt.strokeStyle="#0f0";
+                ctxt.stroke();
+            }
+        </script>
+</body> 
+</html>

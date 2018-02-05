@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Index</title>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                //var element = document.getElementById("outerDiv");
+                //alert(element.innerHTML);
+
+                //var paragraphs = document.getElementsByTagName("p");
+                //alert(paragraphs.length);
+
+                //var paragraphs=document.getElementsByClassName("subPara");
+                //alert("<p> elements with class subPara: "+paragraphs.length);
+
+                //document.querySeletorAll("p");
+                //document.querySelector("#outerdiv");
+
+               // var element =document.getElementById("innerDiv");
+                //alert(element.innerHTML);
+                //document.removeChild(element);
+                //var afterRemove=document.getElementById("innerDiv");
+                //alert(afterRemove);
+                
+                /*var outerDiv=document.getElementById("outerDiv");
+                var element=document.createElement("article");
+                element.innerText="My new <article> element.";
+                outerDiv.appendChild(element);*/
+
+                //var element = document.getElementById("outerDiv").appendChild(document.createElement("article"));
+                //element.innerText="My new <article> element";
+
+                /*var element=document.getElementById("outerDiv").insertBefore(
+                                document.createElement("article"),
+                                document.getElementById("innerDiv"));
+                
+                element.innerText="My new <article> element";*/
+
+                /*var inner=document.getElementById("innerDiv");
+                var element=inner.insertBefore(document.createElement("article"),inner.firstChild);
+                element.innerText="My new <article> element.";*/
+
+               // var innerDiv=document.getElementById("innerDiv");
+              //var p=innerDiv.removeChild(document.getElementById("P1"));
+
+              //var innerDiv = document.getElementById("innerDiv");
+              ///innerDiv.removeNode(true);
+
+              var innerDiv=document.getElementById("innerDiv");
+              var newDiv=document.createElement("div");
+
+              for (var i=0; i<innerDiv.childNodes.length; i++)
+              {
+                  var anchor=newDiv.appendChild(document.createElement("a"));
+                  anchor.setAttribute("href","http://www.google.ro");
+                  anchor.text= innerDiv.childNodes[i].textContent;
+                  newDiv.appendChild(document.createElement("br"));
+              }
+
+              innerDiv.replaceNode(newDiv);
+
+            /*var innerDiv=document.getElementById("innerDiv");
+              var newDiv=document.createElement("div");
+
+              for (var i=0; i<innerDiv.childNodes.length; i++)
+              {
+                  var anchor=newDiv.appendChild(document.createElement("a"));
+                  anchor.setAttribute("href","http://www.google.ro");
+                  anchor.text= innerDiv.childNodes[i].textContent;
+                  innerDiv.replaceChild(anchor, innerDiv.childNodes[i]);
+                  newDiv.appendChild(document.createElement("br"));
+              }
+
+              innerDiv.replaceNode(newDiv);
+              */
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="outerDiv">
+            <p class="mainPara">Main Paragraph</p>
+            <ul>
+                <li>First List Item</li>
+                <li>Second List Item</li>
+                <li>Third List Item</li>
+                <li>Fourth List Item</li>
+            </ul>
+            <div id="innerDiv">
+                <p class="subPara" id="P1">Pragraph 1</p>
+                <p class="subPara" id="P2">Pragraph 2</p>
+                <p class="subPara" id="P3">Pragraph 3</p>
+                <p class="subPara" id="P4">Pragraph 4</p>
+            </div>
+            <table>
+                <tr>
+                    <td>Row 1</td>
+                </tr>
+                <tr>
+                    <td>Row 2</td>
+                </tr>
+                <tr>
+                    <td>Row 3</td>
+                </tr>
+                <tr>
+                    <td>Row 4</td>
+                </tr>
+                <tr>
+                    <td>Row 5</td>
+                </tr>
+            </table>
+            <video controls poster="https://www.petakids.com/wp-content/uploads/2015/11/Cute-Red-Bunny.jpg" height="400" width="600">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+                <object>
+                    <p>Video is not supported by this browser.</p>
+                </object>
+            </video>
+            <input type="text"/><input type="submit" value="submit">
+        </div>
+    </body>
+</html>
