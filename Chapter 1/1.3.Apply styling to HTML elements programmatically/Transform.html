@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Applying transfomr</title>
+        <style>
+            #orange1 {
+                height:150px;
+                width:150px;
+            }
+
+            .trans{
+                /*transform: scale(1);
+                transform: rotate(90deg);
+                transform: translate(50px,0px);
+                transform: skew(10deg,20deg);*/
+                transform: translate(50px,0px) scale(1.5) skew(10deg,10deg);
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                document.getElementById("orange1").onclick=function(){
+                    this.classList.add("trans");
+                }
+
+                document.getElementById("btnHideAnElement").onclick=function(){
+                    if(document.getElementById("orange1").style.display=="inline"){
+                        document.getElementById("orange1").style.display="none";
+                    }
+                    else{
+                        document.getElementById("orange1").style.display="inline";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img id="orange1" src="Orange.jpg" style="position:relative"/>
+        <button type="button" id="btnHideAnElement">Show/Hide Element</button>
+    </body>
+</html>

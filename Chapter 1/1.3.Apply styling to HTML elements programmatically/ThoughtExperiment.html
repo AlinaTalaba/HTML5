@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <script>
+            window.onload=function(){
+                    if(document.getElementsByName("Q1")[0].checked){
+                        document.getElementById("Question2").style.display="inline";
+                        document.getElementById("Question3").style.display="none";
+                    }
+                    else{
+                        document.getElementById("Question2").style.display="none";
+                        document.getElementById("Question3").style.display="inline";
+                    }
+
+                document.getElementById("Question1").onclick=function(){
+                    if(document.getElementsByName("Q1")[0].checked){
+                        document.getElementById("Question2").style.display="inline";
+                        document.getElementById("Question3").style.display="none";
+                    }
+                    else{
+                        document.getElementById("Question2").style.display="none";
+                        document.getElementById("Question3").style.display="inline";
+                    }
+                }
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <header>A dynamic Questionnare</header>
+        <section>
+            <article>
+                <hgroup>
+                    <h1>Questionare</h1>
+                    <h2>Answer the questions in order as they appear.</h2>
+                </hgroup>
+                    <div id="Question1">
+                            1. Question 1:
+                            <label><input type="radio" name="Q1" id="Q1Y" value="YES">YES</label>
+                            <label><input type="radio" name="Q1" id="Q1N"value="NO">NO</label>
+                    </div>
+                    <div id="Question2">
+                            2. Question 2:
+                            <label><input type="radio" name="Q2"  id="Q2Y" value="YES">YES</label>
+                            <label><input type="radio" name="Q2" id="Q2N" value="NO">NO</label>
+                    </div>
+                    <div id="Question3">
+                            3. Question 3:
+                            <label><input type="radio" name="Q3" id="Q3Y" value="YES">YES</label>
+                            <label><input type="radio" name="Q3" id="Q3N"value="NO">NO</label>
+                    </div>
+                    <div id="Question4">
+                            4. Question 4:
+                            <label><input type="radio" name="Q4" id="Q4Y" value="YES">YES</label>
+                            <label><input type="radio" name="Q4" id="Q4N"value="NO">NO</label>
+                    </div>
+                    <div id="Question5">
+                            5. Question 5:
+                            <label><input type="radio" name="Q5" id="Q5Y"value="YES">YES</label>
+                            <label><input type="radio" name="Q5" id="Q5N"value="NO">NO</label>
+                    </div>
+                    <div id="Question6">
+                            6. Question 6:
+                            <label><input type="radio" name="Q6" id="Q6Y"value="YES">YES</label>
+                            <label><input type="radio" name="Q6" id="Q6N"value="NO">NO</label>
+                    </div>
+                    <div id="Question7">
+                            7. Question 7:
+                            <label><input type="radio" name="Q7" id="Q7Y"value="YES">YES</label>
+                            <label><input type="radio" name="Q7" id="Q7N"value="NO">NO</label>
+                    </div>
+                    <div id="Question8">
+                            8. Question 8:
+                            <label><input type="radio" name="Q8" id="Q8Y" value="YES">YES</label>
+                            <label><input type="radio" name="Q8" id="Q8N" value="NO">NO</label>
+                    </div>
+                    <div id="Question9">
+                            9. Question 9:
+                            <label><input type="radio" name="Q9" id="Q9Y" value="YES">YES</label>
+                            <label><input type="radio" name="Q9" id="Q9N"value="NO">NO</label>
+                    </div>
+                    <div id="Question10">
+                            10. Question 10:
+                            <label><input type="radio" name="Q10" id="Q10Y"value="YES">YES</label>
+                            <label><input type="radio" name="Q10" id="Q10N"value="NO">NO</label>
+                    </div>
+            </article>
+        </section>
+    </body>
+</html>

@@ -19,6 +19,27 @@
     <canvas id="thirdSurface" width="600" height="400">
             Your browser does not support HTML5.
     </canvas>
+    <canvas id="forthSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="fifthSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="sixSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="sevenSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="eightSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="nineSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="tenSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
     <script>
             window.onload=function(){
                 var drawingSurface=document.getElementById("drawingSurface");
@@ -67,6 +88,100 @@
                thirdContext.lineWidth=5;
                thirdContext.strokeStyle="#f00";
                thirdContext.stroke();
+
+               var forthSurface=document.getElementById("forthSurface");
+               var forthContext=forthSurface.getContext("2d");
+
+               forthContext.beginPath();
+               forthContext.arc(300,200,75,1.75*Math.PI, 1.25*Math.PI, false);
+               forthContext.lineTo(150,125);
+               forthContext.quadraticCurveTo(300,0,450,125);
+               forthContext.lineTo(353,144);
+               forthContext.strokeStyle="blue";
+               forthContext.lineCap="round";
+               forthContext.lineWidth=10;
+               forthContext.fillStyle="Green";
+               forthContext.fill();
+               forthContext.stroke();
+
+               var fifthSurface=document.getElementById("fifthSurface");
+               var fifthContext=fifthSurface.getContext("2d");
+
+               fifthContext.beginPath();
+               var x,y;
+               x=150;
+               y=75;
+               fifthContext.fillStyle="green";
+               fifthContext.fillRect(300-(x/2), 200-(y/2), x, y);
+               fifthContext.stroke();
+
+               var sixSurface=document.getElementById("sixSurface");
+               var sixContext=sixSurface.getContext("2d");
+
+               sixContext.lineWidth=3;
+               sixContext.rect(150,150,200,125);
+               var gradient=sixContext.createLinearGradient(150,150,200,125);
+               gradient.addColorStop(0,"Blue");
+               gradient.addColorStop(0.2,"Pink");
+               gradient.addColorStop(1,"Yellow");
+               sixContext.fillStyle=gradient;
+               sixContext.fill();
+               sixContext.stroke();
+
+               var sevenSurface=document.getElementById("sevenSurface");
+               var sevenContext=sevenSurface.getContext("2d");
+
+               sevenContext.lineWidth=3;
+               sevenContext.rect(150,150,250,175);
+               var gradient2=sevenContext.createRadialGradient(200,200,5,250,250,100);
+               gradient2.addColorStop(0,"Red");
+               gradient2.addColorStop(.5,"Orange");
+               gradient2.addColorStop(1,"Blue");
+               sevenContext.fillStyle=gradient2;
+               sevenContext.fill();
+               sevenContext.stroke();
+
+               var eightSurface=document.getElementById("eightSurface");
+               var eightContext=eightSurface.getContext("2d");
+
+               eightContext.lineWidth=3;
+               eightContext.rect(150,150,200,125);
+               var img=new Image();
+               img.src="texture.jpg";
+               img.onload=function(){
+                    var pat=eightContext.createPattern(img,"repeat");
+                    eightContext.fillStyle=pat;
+                    eightContext.fill();
+                    eightContext.stroke();
+               }
+
+               var nineSurface=document.getElementById("nineSurface");
+               var nineContext=nineSurface.getContext("2d");
+
+               var img2 = new Image();
+               img2.src="backBUtton.png";
+               img2.onload=function(){
+                   nineContext.drawImage(img2,0,0, img2.width*.5, img2.height*.5);
+                   nineContext.stroke();
+               }
+
+               var tenSurface=document.getElementById("tenSurface");
+               var tenContext=tenSurface.getContext("2d");
+               
+               tenContext.strokeText("1. Text with default font.", 100,100);
+               tenContext.font="24px arial";
+               tenContext.strokeText("2. Text with altered font.", 100, 125);
+               tenContext.font="24px arial";
+               tenContext.strokeStyle="Red";
+               tenContext.strokeText("3. Text with altered colored font.", 100,160);
+               tenContext.font="24px arial";
+               tenContext.fillStyle="Red";
+               tenContext.fillText("4. Text with altered colored font.",100,185);
+               tenContext.font="24px arial";
+               tenContext.textAlign="center";
+               tenContext.fillStyle="Red";
+               tenContext.fillText("5. Text with altered colored font Centered",tenSurface.width/2,tenSurface.height/2);
+
             }
         </script>
 </body> 
